@@ -1,0 +1,229 @@
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Phone App Container */
+.phone-app {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.app-header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.status {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.status.offline {
+  background-color: #dc3545;
+}
+
+.status.online {
+  background-color: #28a745;
+}
+
+/* Sections */
+.section {
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.section h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Form Elements */
+.input-group {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0069d9;
+}
+
+.options {
+  margin-top: 10px;
+}
+
+/* Call Section */
+#call-section {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#call-status {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#call-number {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.call-time {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Call Controls */
+.call-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+.btn-success {
+  background-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+/* Public Listings */
+.public-listings {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.public-listings h3 {
+  margin-bottom: 10px;
+}
+
+#public-numbers-list {
+  list-style: none;
+  margin-top: 10px;
+}
+
+#public-numbers-list li {
+  padding: 8px 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#public-numbers-list li:hover {
+  background-color: #f5f5f5;
+}
+
+/* Incoming Call */
+#incoming-call-section {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: white;
+  }
+  50% {
+    background-color: #f8f9fa;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+#caller-number {
+  font-size: 24px;
+  margin: 15px 0;
+}
+
+.ringtone-indicator {
+  color: #666;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* Current Number Display */
+.current-number {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+#current-number {
+  color: #007bff;
+}

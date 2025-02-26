@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Phone App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="phone-app">
+      <div class="app-header">
+        <h1>Web Phone</h1>
+        <div id="status-indicator" class="status offline">Offline</div>
+      </div>
+      
+      <!-- Registration Section -->
+      <div id="registration-section" class="section">
+        <h2>Register Your Phone Number</h2>
+        <div class="input-group">
+          <input type="text" id="phone-number-input" placeholder="Enter your phone number">
+          <button id="register-btn">Register</button>
+        </div>
+        <div class="options">
+          <label>
+            <input type="checkbox" id="public-listing-checkbox">
+            List my number publicly
+          </label>
+        </div>
+      </div>
+      
+      <!-- Dialer Section -->
+      <div id="dialer-section" class="section hidden">
+        <h2>Make a Call</h2>
+        <div class="current-number">
+          Your number: <span id="current-number"></span>
+        </div>
+        <div class="input-group">
+          <input type="text" id="target-number-input" placeholder="Enter number to call">
+          <button id="call-btn">Call</button>
+        </div>
+        <div class="public-listings">
+          <h3>Public Numbers</h3>
+          <button id="refresh-listings-btn">Refresh</button>
+          <ul id="public-numbers-list"></ul>
+        </div>
+      </div>
+      
+      <!-- Call Section -->
+      <div id="call-section" class="section hidden">
+        <div id="call-status">Calling...</div>
+        <div id="call-number"></div>
+        <div class="call-time hidden" id="call-time">00:00</div>
+        <div class="call-controls">
+          <button id="end-call-btn" class="btn-danger">End Call</button>
+          <button id="mute-btn">Mute</button>
+        </div>
+      </div>
+      
+      <!-- Incoming Call Section -->
+      <div id="incoming-call-section" class="section hidden">
+        <h2>Incoming Call</h2>
+        <div id="caller-number"></div>
+        <div class="ringtone-indicator">Ringing...</div>
+        <div class="call-controls">
+          <button id="accept-call-btn" class="btn-success">Accept</button>
+          <button id="reject-call-btn" class="btn-danger">Reject</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Audio elements for ringtone and call audio -->
+  <audio id="ringtone" loop>
+    <source src="ringtone.mp3" type="audio/mpeg">
+  </audio>
+  
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
